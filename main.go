@@ -94,6 +94,7 @@ func (r *Repository) UpdatePage(context *fiber.Ctx) error {
 	r.DB.Save(&pageModel)
 	context.Status(http.StatusOK).JSON(
 		&fiber.Map{"message": "page updated successfully"})
+		
 	return nil 
 }
 
@@ -117,6 +118,7 @@ func (r *Repository) DeletePage(context *fiber.Ctx) error {
 	context.Status(http.StatusOK).JSON(&fiber.Map{
 		"message": "page delete successfully",
 	})
+
 	return nil
 }
 
